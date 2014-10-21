@@ -1,0 +1,133 @@
+<center><h3>Signup_Form</h3>
+    <div class="span10">
+<div class="signup">
+
+<!--<%= form_tag("/home/signupdetails",:method=> "post") do %>
+
+<table>
+<tr>
+	<td><%= label_tag 'FirstName' %></td>
+    <td><%= text_field_tag 'firstname' %></td>
+</tr>
+
+ <tr>
+ 	<td><%= label_tag 'LastName' %></td>
+    <td><%= text_field_tag 'lastname' %></td>
+</tr>
+
+ <tr>
+    <td><%= label_tag 'password' %></td>
+    <td><%= password_field_tag 'password' %></td>
+</tr>
+
+<tr>
+	<td><%= label_tag 'Emailid' %></td>
+    <td><%= text_field_tag 'emailid' %></td>
+</tr>
+
+<tr>
+	<td><%= label_tag 'PhoneNumber' %></td>
+    <td><%= text_field_tag 'phonenumber' %></td>
+</tr>
+
+<tr>
+    <td><%= label_tag 'FaceBookid' %></td>
+    <td><%= text_field_tag 'fbid' %></td>
+</tr>
+
+ <tr>
+    <td><%= label_tag 'gender' %></td>
+    <td><%= radio_button_tag 'gender', 'male' %>male
+	    <%= radio_button_tag 'gender', 'female' %>female</td>
+</tr>
+
+<tr>
+    <td><%= label_tag 'Qualification' %></td>
+    <td><%= select_tag "qualification", "<option>Software Engineer Trainee</option><option>Software Engineer</option><option>Delivery Manager</option>".html_safe %></td>
+</tr>
+
+<tr>
+    <td><%= label_tag 'lanuage' %></td>
+    <td><%= check_box_tag "english", "english" %> English
+    <%= check_box_tag "hindi", "hindi" %> Hindi</td>
+</tr>
+<tr>
+    <td><%= label_tag 'address' %></td>
+    <td><%= text_area_tag 'address' %></td>
+</tr>
+
+<tr><td><%= label_tag 'Image' %></td><td><%=file_field_tag(:image)%></td>    </tr>
+
+<tr><td><%=hidden_field_tag 'tags_list'%></td></tr>
+ <tr>
+    <td colspan="5"><center><%= submit_tag "Submit"%></center></td>
+  </tr>
+</table>
+<%end%> -->
+
+<%= form_for @user, :url => {:action => "signupdetails"} do |f| %>
+    <table>
+        <tr>
+            <td><%= label_tag 'FirstName' %></td>
+            <td><%= f.text_field :firstname %></td>
+        </tr>
+
+         <tr>
+            <td><%= label_tag 'LastName' %></td>
+            <td><%= f.text_field :lastname %></td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'password' %></td>
+            <td><%= f.password_field :password %></td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'Emailid' %></td>
+            <td><%= f.text_field :emailid %></td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'PhoneNumber' %></td>
+            <td><%= f.text_field :phonenumber %></td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'gender' %></td>
+            <td><%= f.radio_button :gender, 'male' %>male
+            <%= f.radio_button :gender, 'female' %>female</td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'Qualification' %></td>
+            <td><%= f.select :qualification, "<option>Software Engineer Trainee</option><option>Software Engineer</option><option>Delivery Manager</option>".html_safe %></td>
+        </tr>
+
+        <tr>
+            <td><%= label_tag 'Married' %></td>
+            <td><%= f.check_box :married %></td>
+        </tr>
+
+
+        <tr>
+            <td><%= label_tag 'address' %></td>
+            <td><%= f.text_area :address %></td>
+        </tr>
+
+        <tr>
+            <td colspan="5"><center><%= f.submit "Submit"%></center></td>
+        </tr>
+  </table>
+
+<%end%>
+
+</div></div>
+</center>
+
+
+<% if !flash[:error].nil? %>
+ <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert" >×</button>
+    <strong><%= flash[:error] %></strong>
+    </div>
+<% end %>

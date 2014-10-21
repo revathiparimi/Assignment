@@ -1,0 +1,21 @@
+
+<%= render 'allviews/header' %>
+<center><h3>Welcome to </h3>
+<p><%=session[:user]%></p>
+
+</center>
+
+
+
+<%= render :partial => "userdatadisplay", locals:{member: @user} %> 
+
+<center>
+<%=  link_to '<button type="button">LogOut</button>'.html_safe,  '/home/index' %>
+</center>
+<% if !flash[:notadmin].nil? %>
+ <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert" >×</button>
+    <strong><%= flash[:notadmin] %></strong>
+    </div>
+<% end %>
+<%= render 'allviews/footer' %>

@@ -1,0 +1,64 @@
+<center><h3>Signup_Details</h3>
+ <div class="span10">
+<div class="signup">
+
+	<table>
+
+
+
+<tr>
+	<td><%= label_tag 'FullName' %></td>
+    <td><%= @fname %></td>
+</tr>
+
+ <tr>
+ 	<td><%= label_tag 'UserName' %></td>
+    <td><%= @uname %></td>
+</tr>
+
+ <tr>
+    <td><%= label_tag 'password' %></td>
+    <td><%= @password %></td>
+</tr>
+
+<tr>
+	<td><%= label_tag 'Emailid' %></td>
+    <td><%= @emailid %></td>
+</tr>
+
+<tr>
+	<td><%= label_tag 'PhoneNumber' %></td>
+    <td><%= @phonenumber %></td>
+</tr>
+
+ <tr>
+    <td><%= label_tag 'gender' %></td>
+    <td><%= @gender%></td>
+</tr>
+
+<tr>
+    <td><%= label_tag 'Qualification' %></td>
+    <td><%= @qualification %></td>
+</tr>
+
+<tr>
+    <td><%= label_tag 'Language' %></td>
+    <td><%= @english %> <%= @hindi%></td>
+</tr>
+
+
+<tr>
+    <td><%= label_tag 'address' %></td>
+    <td><%= @address %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Your_Photo' %></td>
+    <td><%= @image %></td>
+</tr>
+
+
+</table>
+</div></div>
+<%=  link_to '<button type="button">HOME</button>'.html_safe,  '/home/index' %>
+
+</center>
