@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'nillview/index'
+
   get 'defaultviews/index'
 
   get 'allviews/index'

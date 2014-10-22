@@ -8,6 +8,23 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 
+ header{
+  width: 1290px;
+  height: 50px;
+  background-color: darkslategray;
+}
+.button{
+  
+  font-size: 100%;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  height:50px;
+  background-color: darkslategray;
+  margin-left: 200px;
+
+}
+
 .clearfix {
   *zoom: 1;
 }

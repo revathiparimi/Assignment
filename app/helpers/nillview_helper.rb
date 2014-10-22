@@ -1,0 +1,2 @@
+module NillviewHelper
+end

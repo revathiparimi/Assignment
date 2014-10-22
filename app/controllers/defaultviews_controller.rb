@@ -1,5 +1,5 @@
 class DefaultviewsController < ApplicationController
-	 layout false
+	 #layout false
   def index
   	@users=Signup.all
   end
